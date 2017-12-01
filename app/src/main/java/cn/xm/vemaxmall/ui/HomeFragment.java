@@ -7,20 +7,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.youth.banner.Banner;
+
+import java.util.ArrayList;
+
 import cn.lzz.utils.ResoureUtils;
 import cn.xm.vemaxmall.R;
 import cn.xm.vemaxmall.base.BaseFragment;
+import cn.xm.vemaxmall.utils.GlideImageLoader;
 
 
-/**
- * SwipeRefreshLayout
- * RecycleView实现触底加载
- * 无数据的显示
- * */
 public class HomeFragment extends BaseFragment {
 
     private View rootView;
     private SwipeRefreshLayout srl;
+    private Banner banner;
 
     public static HomeFragment newInstance(){
         HomeFragment homeFragment = new HomeFragment();
@@ -49,6 +50,22 @@ public class HomeFragment extends BaseFragment {
                 },1000);
             }
         });
+
+        banner = (Banner) rootView.findViewById(R.id.banner);
+        ArrayList<Integer> images = new ArrayList<>();
+        images.add(R.drawable.img_two_bi_one);
+        images.add(R.drawable.img_two_bi_one);
+        images.add(R.drawable.img_two_bi_one);
+        images.add(R.drawable.img_two_bi_one);
+//        ArrayList<String>images = new ArrayList<>();
+//        images.add("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg");
+//        images.add("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg");
+//        images.add("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg");
+
+        banner.startAutoPlay();
+        banner.setDelayTime(4000);
+        banner.setImages(images).setImageLoader(new GlideImageLoader()).start();
+//            banner.setImages(images);
     }
 
 
