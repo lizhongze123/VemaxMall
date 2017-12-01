@@ -1,9 +1,12 @@
 package cn.xm.vemaxmall.ui;
 
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,23 +17,26 @@ import android.widget.TextView;
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import cn.lzz.utils.ResoureUtils;
 import cn.xm.vemaxmall.R;
 import cn.xm.vemaxmall.base.BaseFragment;
+import cn.xm.vemaxmall.ui.adapter.ItemAdapter;
+import cn.xm.vemaxmall.ui.entity.ItemBean;
 import cn.xm.vemaxmall.utils.GlideImageLoader;
 import cn.xm.vemaxmall.view.ObservableScrollView;
-
 
 public class HomeFragment extends BaseFragment implements ObservableScrollView.ScrollViewListener{
 
     private ObservableScrollView scrollView;
     private LinearLayout titleBar;
     private View rootView;
-    private SwipeRefreshLayout srl;
     private Banner banner;
     private TextView tvInput;
     private int imageHeight;
+    private RecyclerView rv;
+    private GridLayoutManager mLayoutManager;
 
     public static HomeFragment newInstance(){
         HomeFragment homeFragment = new HomeFragment();
@@ -63,22 +69,7 @@ public class HomeFragment extends BaseFragment implements ObservableScrollView.S
             }
         });
 
-
         scrollView.setScrollViewListener(this);
-
-        srl = rootView.findViewById(R.id.srl);
-        srl.setColorSchemeColors(ResoureUtils.getColor(getContext(), R.color.colorTheme));
-        srl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                srl.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                    }
-                },1000);
-            }
-        });
 
         banner = (Banner) rootView.findViewById(R.id.banner);
         ArrayList<Integer> images = new ArrayList<>();
@@ -95,6 +86,23 @@ public class HomeFragment extends BaseFragment implements ObservableScrollView.S
         banner.setDelayTime(4000);
         banner.setImages(images).setImageLoader(new GlideImageLoader()).start();
 //            banner.setImages(images);
+
+
+        List<ItemBean> itemList = new ArrayList<>();
+        String[] items = getResources().getStringArray(R.array.data_items);
+        TypedArray icons = getResources().obtainTypedArray(R.array.data_icons);
+        for (int i = 0; i < items.length; i++) {
+            ItemBean item = new ItemBean();
+            item.iconName = items[i];
+            item.iconResId = icons.getResourceId(i, 0);
+            itemList.add(item);
+        }
+        icons.recycle();
+        rv = rootView.findViewById(R.id.rv);
+        mLayoutManager = new GridLayoutManager(getActivity(), 5);
+        rv.setLayoutManager(mLayoutManager);
+        ItemAdapter mAdapter = new ItemAdapter(this.getContext(), itemList);
+        rv.setAdapter(mAdapter);
     }
 
 

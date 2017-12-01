@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="data_items">
+        <item>机油滤</item>
+        <item>空调滤</item>
+        <item>空气滤</item>
+        <item>火花塞</item>
+        <item>机油</item>
+        <item>刹车片</item>
+        <item>刹车盘</item>
+        <item>雨刮</item>
+        <item>皮带</item>
+        <item>更多</item>
+    </string-array>
+
+    <integer-array name="data_icons">
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+    </integer-array>
+
+</resources>
