@@ -17,6 +17,10 @@
     <color name="gray_bb">#bbbbbb</color>
     <color name="gray_dd">#dddddd</color>
 
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+
+
     <color name="radio_textcolor_false">#818181</color>
     <color name="radio_textcolor_true">#ff5151</color>
 
