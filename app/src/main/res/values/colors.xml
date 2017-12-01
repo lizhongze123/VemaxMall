@@ -5,6 +5,19 @@
     <color name="colorAccent">#FF4081</color>
 
 
+    <color name="main_tab">#fff</color>
+    <color name="main_bg">#f0f2f5</color>
+
     <color name="transparent">#00000000</color>
+    <color name="colorTheme">#ffce3d3a</color>
+
+    <color name="gray_33">#333333</color>
+    <color name="gray_66">#666666</color>
+    <color name="gray_99">#999999</color>
+    <color name="gray_bb">#bbbbbb</color>
+    <color name="gray_dd">#dddddd</color>
+
+    <color name="radio_textcolor_false">#818181</color>
+    <color name="radio_textcolor_true">#ff5151</color>
 
 </resources>
