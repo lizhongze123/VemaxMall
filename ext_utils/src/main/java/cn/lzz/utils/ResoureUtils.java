@@ -4,9 +4,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 
-/**
- * Created by lzz on 2017/3/10.
- */
 
 public class ResoureUtils {
 
