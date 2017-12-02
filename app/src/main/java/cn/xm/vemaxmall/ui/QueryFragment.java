@@ -2,7 +2,6 @@ package cn.xm.vemaxmall.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import cn.lzz.utils.ResoureUtils;
 import cn.xm.vemaxmall.R;
 import cn.xm.vemaxmall.base.BaseFragment;
 import cn.xm.vemaxmall.view.sidebar.CarBean;
@@ -21,7 +19,6 @@ import cn.xm.vemaxmall.view.sidebar.PinyinComparator;
 import cn.xm.vemaxmall.view.sidebar.PinyinUtils;
 import cn.xm.vemaxmall.view.sidebar.SideBar;
 import cn.xm.vemaxmall.view.sidebar.SortAdapter;
-
 
 public class QueryFragment extends BaseFragment {
 
