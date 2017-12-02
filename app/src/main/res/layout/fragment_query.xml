@@ -1,14 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/srl"
+    <ListView
+        android:id="@+id/listview"
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:divider="@null" >
+    </ListView>
 
-    </android.support.v4.widget.SwipeRefreshLayout>
+    <TextView
+        android:id="@+id/dialog"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_gravity="center"
+        android:background="@drawable/side_text_bg"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:visibility="invisible" />
 
-</LinearLayout>  
+    <cn.xm.vemaxmall.view.sidebar.SideBar
+        android:id="@+id/sidebar"
+        android:layout_width="20dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

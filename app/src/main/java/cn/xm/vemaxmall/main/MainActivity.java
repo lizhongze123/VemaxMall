@@ -43,7 +43,7 @@ public class MainActivity extends BaseActivity {
         homeFragment = HomeFragment.newInstance();
         meFragment = MeFragment.newInstance();
         queryFragment = QueryFragment.newInstance();
-        fragmentAry = new Fragment[]{homeFragment, meFragment, queryFragment};
+        fragmentAry = new Fragment[]{homeFragment, queryFragment, meFragment};
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.fragment_container, homeFragment);
