@@ -4,7 +4,6 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,7 +18,6 @@ import com.youth.banner.Banner;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.lzz.utils.ResoureUtils;
 import cn.xm.vemaxmall.R;
 import cn.xm.vemaxmall.base.BaseFragment;
 import cn.xm.vemaxmall.ui.adapter.ItemAdapter;

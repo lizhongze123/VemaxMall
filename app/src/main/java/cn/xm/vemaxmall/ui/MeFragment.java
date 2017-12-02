@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import cn.lzz.utils.ResoureUtils;
 import cn.xm.vemaxmall.R;
 import cn.xm.vemaxmall.base.BaseFragment;
 
